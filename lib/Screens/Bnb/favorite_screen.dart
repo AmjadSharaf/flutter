@@ -45,6 +45,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                 Row(children: [Icon(Icons.thumb_up), Text("like")]),
                 Row(children: [Icon(Icons.comment_outlined), Text("commrnt")]),
                 Row(children: [Icon(Icons.shortcut_sharp), Text("share")]),
+                Row(children: [Icon(Icons.favorite), Text("favorite")]),
               ],
             ),
           ],
