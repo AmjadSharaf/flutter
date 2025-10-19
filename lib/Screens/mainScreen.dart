@@ -24,8 +24,8 @@ class _SplashScreenState extends State<Mainscreen> {
         actions: [
           InkWell(
             onTap: () {
-              print("object");
-            },
+              // Navigator.push(context, route)         
+                 },
             child: Icon(Icons.search, color: Colors.black),
           ),
           Icon(Icons.shape_line, color: Colors.black),
