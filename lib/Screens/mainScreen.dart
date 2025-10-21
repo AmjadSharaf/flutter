@@ -3,7 +3,9 @@ import 'package:test/Screens/Bnb/cart_screen.dart';
 import 'package:test/Screens/Bnb/favorite_screen.dart';
 import 'package:test/Screens/Bnb/home_screen.dart';
 import 'package:test/Screens/Bnb/profile_screen.dart';
+import 'package:test/Screens/logout.dart';
 import 'package:test/Screens/notification.dart';
+import 'package:test/Screens/sttengs.dart';
 
 class Mainscreen extends StatefulWidget {
   const Mainscreen({super.key});
@@ -34,14 +36,26 @@ class _SplashScreenState extends State<Mainscreen> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Sittengs();
-              },))
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Sttengs();
+                  },
+                ),
+              );
             },
-            child: Icon(Icons.shape_line, color: Colors.black)),
+            child: Icon(Icons.shape_line, color: Colors.black),
+          ),
         ],
         elevation: 10,
-        leading: Icon(Icons.logout, color: Colors.black),
+        leading: InkWell(
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Logout()),
+          ),
+          child: Icon(Icons.logout, color: Colors.black),
+        ),
       ),
       body: [
         HomeScreen(),
