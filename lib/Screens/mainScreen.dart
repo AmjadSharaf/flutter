@@ -3,6 +3,7 @@ import 'package:test/Screens/Bnb/cart_screen.dart';
 import 'package:test/Screens/Bnb/favorite_screen.dart';
 import 'package:test/Screens/Bnb/home_screen.dart';
 import 'package:test/Screens/Bnb/profile_screen.dart';
+import 'package:test/Screens/notification.dart';
 
 class Mainscreen extends StatefulWidget {
   const Mainscreen({super.key});
@@ -24,11 +25,20 @@ class _SplashScreenState extends State<Mainscreen> {
         actions: [
           InkWell(
             onTap: () {
-              // Navigator.push(context, route)         
-                 },
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Notificationr()),
+              );
+            },
             child: Icon(Icons.search, color: Colors.black),
           ),
-          Icon(Icons.shape_line, color: Colors.black),
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Sittengs();
+              },))
+            },
+            child: Icon(Icons.shape_line, color: Colors.black)),
         ],
         elevation: 10,
         leading: Icon(Icons.logout, color: Colors.black),
@@ -37,7 +47,7 @@ class _SplashScreenState extends State<Mainscreen> {
         HomeScreen(),
         FavoriteScreen(),
         CartScreen(),
-        ProfileScreen()
+        ProfileScreen(),
       ][selectetIndex],
       bottomNavigationBar: BottomNavigationBar(
         elevation: 10,
