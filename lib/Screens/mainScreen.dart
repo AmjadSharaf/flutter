@@ -16,10 +16,32 @@ class Mainscreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<Mainscreen> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
   int selectetIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // endDrawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(child: Text("data")),
+            ListTile(
+              title: Text("profail"),
+              subtitle: Text("vvjhgbjjagvv"),
+              leading: Icon(Icons.person),
+              trailing: Icon(Icons.abc),
+            ),
+            ListTile(
+              title: Text("setting"),
+              subtitle: Text("vvjhgbjjagvv"),
+              leading: Icon(Icons.settings),
+              trailing: Icon(Icons.abc),
+            ),
+          ],
+        ),
+      ),
+      key: _key,
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.blue,
@@ -48,6 +70,12 @@ class _SplashScreenState extends State<Mainscreen> {
             },
             child: Icon(Icons.shape_line, color: Colors.black),
           ),
+          InkWell(
+            onTap: () {
+              _key.currentState!.openDrawer();
+            },
+            child: Icon(Icons.menu),
+          ),
         ],
         elevation: 10,
         leading: InkWell(
@@ -58,6 +86,7 @@ class _SplashScreenState extends State<Mainscreen> {
           child: Icon(Icons.logout, color: Colors.black),
         ),
       ),
+      // drawer: Drawer(),
       body: [
         HomeScreen(),
         FavoriteScreen(),
