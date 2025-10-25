@@ -3,6 +3,7 @@ import 'package:test/Screens/Bnb/cart_screen.dart';
 import 'package:test/Screens/Bnb/favorite_screen.dart';
 import 'package:test/Screens/Bnb/home_screen.dart';
 import 'package:test/Screens/Bnb/profile_screen.dart';
+import 'package:test/Screens/Bnb/test_screen.dart';
 import 'package:test/Screens/logout.dart';
 import 'package:test/Screens/notification.dart';
 import 'package:test/Screens/sttengs.dart';
@@ -62,6 +63,7 @@ class _SplashScreenState extends State<Mainscreen> {
         FavoriteScreen(),
         CartScreen(),
         ProfileScreen(),
+        TestScreen(),
       ][selectetIndex],
       bottomNavigationBar: BottomNavigationBar(
         elevation: 10,
@@ -85,11 +87,12 @@ class _SplashScreenState extends State<Mainscreen> {
             icon: Icon(Icons.favorite),
             label: "Favorites",
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: "add"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
             label: "Cart",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),
     );
