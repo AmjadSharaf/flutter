@@ -4,7 +4,6 @@ import 'package:test/Screens/Bnb/favorite_screen.dart';
 import 'package:test/Screens/Bnb/home_screen.dart';
 import 'package:test/Screens/Bnb/profile_screen.dart';
 import 'package:test/Screens/Bnb/test_screen.dart';
-import 'package:test/Screens/logout.dart';
 import 'package:test/Screens/notification.dart';
 import 'package:test/Screens/sttengs.dart';
 
