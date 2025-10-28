@@ -73,12 +73,22 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: palyfair
+      fonts:
+        - asset: assets/font/playfair/PlayfairDisplay-Black.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-BlackItalic.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-Bold.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-BoldItalic.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-ExtraBold.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-ExtraBoldItalic.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-Italic.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-Medium.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-MediumItalic.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-Regular.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-SemiBold.ttf
+        - asset: assets/font/playfair/PlayfairDisplay-SemiBoldItalic.ttf
+          style: italic
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
