@@ -79,9 +79,23 @@ class _SplashScreenState extends State<Mainscreen> {
         ],
         elevation: 10,
         leading: InkWell(
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Logout()),
+          onTap: () => showModalBottomSheet(
+            isDismissible: true,
+            enableDrag: true,
+            backgroundColor: Colors.red,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25),
+                topRight: Radius.circular(25),
+              ),
+            ),
+            context: context,
+            builder: (context) {
+              return Container(
+                width: double.infinity,
+                child: Column(children: [Text("data")]),
+              );
+            },
           ),
           child: Icon(Icons.logout, color: Colors.black),
         ),
