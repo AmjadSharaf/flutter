@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test/l10n/app_locale.dart';
-import 'package:test/l10n/app_ar.arb';
-import 'package:test/l10n/app_en.arb';
-
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:test/l10n/app-locale.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Icon(Icons.abc, size: 40),
               SizedBox(width: 20),
-              Text("newProject", style: _textStyle),
+              Text(AppLocalizations.of(context)!.newProject, style: _textStyle),
             ],
           ),
           SizedBox(height: 10),

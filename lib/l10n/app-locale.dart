@@ -5,8 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'app_locale_ar.dart';
-import 'app_locale_en.dart';
+import 'app-locale_ar.dart';
+import 'app-locale_en.dart';
 
 // ignore_for_file: type=lint
 
@@ -18,7 +18,7 @@ import 'app_locale_en.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'l10n/app_locale.dart';
+/// import 'l10n/app-locale.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -97,6 +97,12 @@ abstract class AppLocalizations {
     Locale('ar'),
     Locale('en'),
   ];
+
+  /// No description provided for @newProject.
+  ///
+  /// In en, this message translates to:
+  /// **'NewProject'**
+  String get newProject;
 }
 
 class _AppLocalizationsDelegate

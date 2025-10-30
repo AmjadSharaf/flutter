@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test/Screens/mainScreen.dart';
-import 'package:test/l10n/app_locale.dart';
 
+import 'package:test/l10n/app-locale.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'palyfair'),
       debugShowCheckedModeBanner: false,
       home: Mainscreen(),
-      locale: Locale('ar'),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-
+      locale: Locale('en'),
       supportedLocales: const [Locale('ar'), Locale('en')],
     );
   }
